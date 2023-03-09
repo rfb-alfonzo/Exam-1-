@@ -1,0 +1,22 @@
+---
+title: "Question 4 Markdown"
+author: "Robert Bell"
+date: "2023-03-09"
+output: word_document
+---
+
+Here is my code for Question 4 
+```{R}
+library(ggplot2)
+
+bond <- read.csv("James Bond Data.csv")
+
+bond_plot <- ggplot(bond, aes( x = Bond, y = US_Gross, ylim(16067035,304360277))) +
+  geom_point(color = 'blue') +
+  theme_classic()
+
+bond_plot + facet_wrap(~Bond)
+```{R}
+
+
+
